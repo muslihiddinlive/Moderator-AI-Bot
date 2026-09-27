@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tg-mod-functions"
+version = "0.4.0"
+description = "AI function-calling tools for Telegram group moderation, built on aiogram"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "muslihiddinlive" }]
+keywords = ["telegram", "aiogram", "function-calling", "llm", "moderation", "ai-agent"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Communications :: Chat",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: AsyncIO",
+]
+dependencies = [
+    "aiogram>=3.0,<4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[project.urls]
+Homepage = "https://github.com/muslihiddinlive/tg-mod-functions"
+
+[tool.setuptools.packages.find]
+include = ["tg_mod_functions*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
